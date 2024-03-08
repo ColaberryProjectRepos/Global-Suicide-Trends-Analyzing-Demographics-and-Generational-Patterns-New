@@ -1,0 +1,673 @@
+
+Creating DAX Measuring
+12
+<p class="MsoNormal"><span style="font-size:14.0pt;line-height:115%"><b>Creating the
+necessary measures</b></span></p><p class="MsoNormal"><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1439/12/3.jpg" style="width: 50%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img src="https://app.colaberry.com/uploads/ProjectStepsImages/1439/12/4.jpg" style="width: 50%;"><span style="font-size:14.0pt;line-height:115%"><b><br></b><o:p></o:p></span></p><p class="MsoListParagraphCxSpFirst" style="text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-size:14.0pt;line-height:115%;mso-bidi-font-family:Calibri;
+mso-bidi-theme-font:minor-latin">1.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size:14.0pt;line-height:115%">Click on suicide data table and
+select New Measure<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-size:14.0pt;line-height:115%;mso-bidi-font-family:Calibri;
+mso-bidi-theme-font:minor-latin">2.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size:14.0pt;line-height:115%">Start writing the DAX formula (all
+the formulas are at the bottom) or copy and paste one by one.<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-size:14.0pt;line-height:115%;mso-bidi-font-family:Calibri;
+mso-bidi-theme-font:minor-latin">3.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size:14.0pt;line-height:115%">After you done click on the green
+right mark so it will be saved.<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE">
+
+
+
+
+
+
+
+</p><p class="MsoListParagraphCxSpLast" style="text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-size:14.0pt;line-height:115%;mso-bidi-font-family:Calibri;
+mso-bidi-theme-font:minor-latin">4.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size:14.0pt;line-height:115%">Repeat the steps until all the
+measures are created.<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.Arrow population Rate = </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">SWITCH</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">TRUE</span><span style="font-size: 9pt; font-family: Consolas;">(),</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.Population YOY]</span><span style="font-size: 9pt; font-family: Consolas;"> &lt; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">,</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">9662</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.Population YOY]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">9666</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">9652</span><span style="font-size: 9pt; font-family: Consolas;">))<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:12.0pt">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.Arrow Suicide Rate = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">SWITCH</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">TRUE</span><span style="font-size: 9pt; font-family: Consolas;">(),</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.YoY Total Suicide Rate
+(%)]</span><span style="font-size: 9pt; font-family: Consolas;"> &lt; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">9662</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.YoY Total Suicide Rate (%)]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">9662</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">9652</span><span style="font-size: 9pt; font-family: Consolas;">))<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:12.0pt">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.Arrow Suicide YOY% = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">SWITCH</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">TRUE</span><span style="font-size: 9pt; font-family: Consolas;">(),</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[Suicide YOY]</span><span style="font-size: 9pt; font-family: Consolas;"> &lt; </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">9662</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[Suicide YOY]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">9662</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">9652</span><span style="font-size: 9pt; font-family: Consolas;">))<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:12.0pt">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.Average population = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">AVERAGEX</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">'Suicide Data'</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.TotalPopulation]</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.Average Suicides = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">AVERAGE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">'Suicide
+Data'[Suicides_No]</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.Female Suicide % = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">DIVIDE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[Female]</span><span style="font-size: 9pt; font-family: Consolas;">,</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.Total Suicides]</span><span style="font-size: 9pt; font-family: Consolas;">,</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.Male Suicide % = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">DIVIDE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[Male]</span><span style="font-size: 9pt; font-family: Consolas;">,</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.Total Suicides]</span><span style="font-size: 9pt; font-family: Consolas;">,</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.Population YOY = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">MAX</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">) <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYearPopulation</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.Average population]</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">1</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYearPopulation</span><span style="font-size: 9pt; font-family: Consolas;"> = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.Average population]</span><span style="font-size: 9pt; font-family: Consolas;">,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">FILTER</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">ALL</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">), &nbsp;</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:green;mso-font-kerning:0pt;
+mso-ligatures:none">-- Remove any date filters for accurate comparison</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">RETURN</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">IF</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">ISBLANK</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearPopulation</span><span style="font-size: 9pt; font-family: Consolas;">),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">BLANK</span><span style="font-size: 9pt; font-family: Consolas;">(), &nbsp;</span><span style="font-size:9.0pt;font-family:
+Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:green;mso-font-kerning:0pt;mso-ligatures:none">-- Return a blank if no
+data for the previous year</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">DIVIDE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">CurrentYearPopulation</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearPopulation</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearPopulation</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.Suicide Ratio by Age and Gender = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">MaleSuicides</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">SUM</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'Suicide Data'[suicides_no]</span><span style="font-size: 9pt; font-family: Consolas;">), </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">'Suicide Data'[sex]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515;mso-font-kerning:0pt;mso-ligatures:none">"male"</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">FemaleSuicides</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">SUM</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'Suicide Data'[suicides_no]</span><span style="font-size: 9pt; font-family: Consolas;">), </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">'Suicide Data'[sex]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515;mso-font-kerning:0pt;mso-ligatures:none">"female"</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">RETURN</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">DIVIDE</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;mso-ligatures:none">MaleSuicides</span><span style="font-size: 9pt; font-family: Consolas;">,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;mso-ligatures:none">FemaleSuicides</span><span style="font-size: 9pt; font-family: Consolas;">,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.Total Suicide Rate = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.Total
+Suicides]</span><span style="font-size: 9pt; font-family: Consolas;"> / </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.TotalPopulation]</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.Total Suicides = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">SUM</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">'Suicide
+Data'[suicides_no]</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.TotalPopulation = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">MaxYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">MAX</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">RETURN</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">SUM</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">'Suicide
+Data'[population]</span><span style="font-size: 9pt; font-family: Consolas;">), </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">MaxYear</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">.YoY Total Suicide Rate (%) = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">MAX</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">1</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">TotalSuicideRateCurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.Total Suicide Rate]</span><span style="font-size: 9pt; font-family: Consolas;">,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">TotalSuicideRatePreviousYear</span><span style="font-size: 9pt; font-family: Consolas;"> = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.Total Suicide Rate]</span><span style="font-size: 9pt; font-family: Consolas;">,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">RETURN</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">DIVIDE</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;mso-ligatures:none">TotalSuicideRateCurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">TotalSuicideRatePreviousYear</span><span style="font-size: 9pt; font-family: Consolas;">,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;mso-ligatures:none">TotalSuicideRatePreviousYear</span><span style="font-size: 9pt; font-family: Consolas;">,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">Average Suicide Rate (%) = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">AVERAGEX</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">SUMMARIZE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">'Suicide Data'</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">'Suicide Data'[Year]</span><span style="font-size: 9pt; font-family: Consolas;">),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">DIVIDE</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">SUM</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'Suicide Data'[suicides_no]</span><span style="font-size: 9pt; font-family: Consolas;">),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">SUM</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'Suicide Data'[population]</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">Female = </span><span style="font-size:9.0pt;font-family:
+Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.Total Suicides]</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">'Suicide Data'[sex]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515;mso-font-kerning:0pt;mso-ligatures:none">"Female"</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">Male = </span><span style="font-size:9.0pt;font-family:
+Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.Total Suicides]</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">'Suicide Data'[sex]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#A31515;mso-font-kerning:0pt;mso-ligatures:none">"Male"</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:115%">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">Suicide YOY = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">MAX</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">) <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYearSuicides</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.Average Suicides]</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">1</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYearSuicides</span><span style="font-size: 9pt; font-family: Consolas;"> = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.Average Suicides]</span><span style="font-size: 9pt; font-family: Consolas;">,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">FILTER</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">ALL</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">), &nbsp;</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:green;mso-font-kerning:0pt;
+mso-ligatures:none">-- Remove any date filters for accurate comparison</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">RETURN</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">IF</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">ISBLANK</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearSuicides</span><span style="font-size: 9pt; font-family: Consolas;">),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">BLANK</span><span style="font-size: 9pt; font-family: Consolas;">(), &nbsp;</span><span style="font-size:9.0pt;font-family:
+Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:green;mso-font-kerning:0pt;mso-ligatures:none">-- Return a blank if no
+data for the previous year</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">DIVIDE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">CurrentYearSuicides</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearSuicides</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearSuicides</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;">)</span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><span style="font-size: 9pt; font-family: Consolas;"><o:p><br></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;line-height:13.5pt;background:#FFFFFE"><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1439/12/3.gif" style="width: 50%;"><br></p>
+
+<p><a href="https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-tutorial-create-measures" target="_blank">Creating Measures</a><br></p>
+
